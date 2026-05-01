@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Dashboard</title>
+
+<!-- Google Icons -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f1f5f9;
+    }
+
+    /* Header */
+    .header {
+        background: #0d6efd;
+        color: white;
+        padding: 15px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header h2 {
+        margin: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .header .material-icons {
+        margin-right: 8px;
+    }
+
+    .logout-btn {
+        background: #dc3545;
+        border: none;
+        padding: 8px 12px;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .logout-btn:hover {
+        background: #c82333;
+    }
+
+    /* Content */
+    .container {
+        padding: 30px;
+    }
+
+    .welcome-box {
+        background: white;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .welcome-box h1 {
+        margin: 0;
+        color: #333;
+    }
+
+    .welcome-box p {
+        color: #666;
+        margin-top: 10px;
+    }
+</style>
+
+</head>
+
+<body>
+
+<!-- Header -->
+<div class="header">
+    <h2>
+        <span class="material-icons">person</span>
+        User Dashboard
+    </h2>
+
+    <form method="post" action="/logout">
+        <button class="logout-btn">Logout</button>
+    </form>
+</div>
+
+<!-- Content -->
+<div class="container">
+
+    <div class="welcome-box">
+        <h1>
+            Hello, <span th:text="${#authentication.name}">User</span> 👋
+        </h1>
+
+        <p>Welcome to your dashboard. You can view your details and activities here.</p>
+    </div>
+
+</div>
+
+</body>
+</html>

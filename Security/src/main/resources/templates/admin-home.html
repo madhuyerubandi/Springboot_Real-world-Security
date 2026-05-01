@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard</title>
+
+<!-- Google Icons -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f4f6f9;
+    }
+
+    /* Header */
+    .header {
+        background: #343a40;
+        color: white;
+        padding: 15px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .header h2 {
+        margin: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .header .material-icons {
+        margin-right: 8px;
+    }
+
+    .logout-btn {
+        background: #dc3545;
+        border: none;
+        padding: 8px 12px;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .logout-btn:hover {
+        background: #c82333;
+    }
+
+    /* Dashboard */
+    .dashboard {
+        padding: 30px;
+    }
+
+    .card-container {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        width: 220px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        text-align: center;
+    }
+
+    .card .material-icons {
+        font-size: 40px;
+        color: #007bff;
+    }
+
+    .card h3 {
+        margin: 10px 0 5px;
+    }
+
+    .card p {
+        color: #777;
+        font-size: 14px;
+    }
+</style>
+
+</head>
+
+<body>
+
+<!-- Header -->
+<div class="header">
+    <h2>
+        <span class="material-icons">admin_panel_settings</span>
+        Admin Dashboard
+    </h2>
+    <button class="logout-btn">Logout</button>
+</div>
+
+<!-- Dashboard Content -->
+<div class="dashboard">
+    <h2>Welcome, Admin 👋</h2>
+
+    <div class="card-container">
+        
+        <div class="card">
+            <span class="material-icons">group</span>
+            <h3>Users</h3>
+            <p>Manage users</p>
+        </div>
+
+        <div class="card">
+            <span class="material-icons">security</span>
+            <h3>Roles</h3>
+            <p>Manage roles</p>
+        </div>
+
+        <div class="card">
+            <span class="material-icons">settings</span>
+            <h3>Settings</h3>
+            <p>System settings</p>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
